@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std; 
+
+int main() {
+    float x1,y1, x2, y2,x3,y3,x4,y4; 
+    cin >>x1 >> y1 >> x2 >> y2 >>x3 >>y3>>x4>>y4;
+    float lado1, lado2, lado3, lado4;
+    
+    if(x1>x2){
+        lado1 = x1-x2;
+    } else if(x1<x2){
+        lado1 = x2-x2;
+    }
+    if(y2>y4){
+        lado2 = y2-y4;
+    } else if(y2<y4){
+        lado2 = y4-y2;
+    }
+    if(x3>x4){
+        lado3 = x3-x4;
+    } else if(x4>x3){
+        lado3 = x4 - x3;
+    }
+    
+    if(y1 > y3){
+        lado4 = y1 - y3; 
+    } else if(y3 > y1){
+        lado4 = y3 - y1;
+    }
+    
+    if(lado1 > lado2 && lado3 && lado4){
+        cout << lado1; 
+    } else if(lado2 > lado1&& lado3 && lado4 ){
+        cout << lado2;
+    } else if(lado3 > lado1 && lado2 && lado4){
+        cout << lado3;
+    } else if (lado4 > lado1 && lado2 && lado3){
+        cout << lado4;
+    }
+    return 0; 
+}
